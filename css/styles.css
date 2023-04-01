@@ -91,7 +91,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
@@ -104,7 +104,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
@@ -169,7 +169,12 @@ body {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 
 /* HERO SECTION */
@@ -297,11 +302,6 @@ ul {
   overflow: hidden;
 }
 
-.vision {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
 .vision-item {
   display: none;
 }
@@ -348,11 +348,6 @@ ul {
 }
 
 @media screen and (min-width: 1200px) {
-  .vision {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
   .vision-list {
     gap: var(--indent);
   }
@@ -415,9 +410,18 @@ ul {
 
 .team-card-list {
   display: flex;
-  gap: var(--indent);
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: var(--indent);
+  row-gap: 72px;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-card-list {
+    row-gap: 64px;
+  }
 }
 
 .team-card {
@@ -486,6 +490,7 @@ ul {
   column-gap: 16px;
   row-gap: 72px;
   justify-content: center;
+  align-items: center;
 }
 
 .customers-link {
@@ -531,16 +536,56 @@ ul {
 
 footer {
   background-color: var(--dark-bg-clr);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .footer-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 72px;
+  column-gap: 24px;
 }
 
-.footer-info {
-  margin-right: 120px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-wrapper {
+    justify-content: flex-start;
+  }
+
+  .container-footer {
+    max-width: 552px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-wrapper {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-info {
+    margin-right: 120px;
+  }
 }
 
 .logo-footer {
@@ -550,6 +595,11 @@ footer {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   color: var(--primary-brand-color);
 }
 
@@ -563,15 +613,34 @@ footer {
   color: var(--light-color);
 }
 
+@media screen and (min-width: 768px) {
+  .logo-footer {
+    justify-content: start;
+  }
+}
+
 .footer-text {
   color: var(--accent-color);
-  max-width: 264px;
+  max-width: 268px;
   margin-top: 16px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-text {
+    width: 264px;
+  }
 }
 
 .social-media {
-  display: block;
-  margin-right: 80px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .social-media {
+    text-align: left;
+    margin-right: 80px;
+  }
 }
 
 .social-text {
@@ -580,8 +649,14 @@ footer {
   margin-bottom: 16px;
 }
 
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
 .footer-link {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--primary-brand-color);
 
   transition: background-color var(--anim-fast);
 }
@@ -591,19 +666,40 @@ footer {
   background-color: var(--green-success-clr);
 }
 
+@media screen and (max-width: 767px) {
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.subscribe-form-label {
+  text-align: center;
+  font-weight: 500;
+
+  color: var(--primary-white-color);
+}
+
 .subscribe-group {
   display: flex;
+  /* width: 100%; */
   align-items: center;
   gap: 24px;
   margin-top: 16px;
 }
 
-.subscribe-form-label {
-  font-weight: 500;
-  color: var(--primary-white-color);
+@media screen and (max-width: 767px) {
+  .subscribe-group {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
+
 .subscribe-input {
-  width: 264px;
+  width: 100%;
+  max-width: 398px;
   height: 40px;
   padding: 8px 16px;
 
@@ -621,6 +717,11 @@ footer {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 264px;
+  }
+}
 .btn {
   display: flex;
   justify-content: center;
