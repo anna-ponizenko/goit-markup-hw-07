@@ -100,6 +100,12 @@ body {
   color: var(--primary-brand-color);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .logo-header {
+    margin-right: 120px;
+  }
+}
+
 .logo-dark {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -110,6 +116,12 @@ body {
   color: var(--title-text-color);
 }
 /* MENU NAVIGATION */
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}
+
 .navigation {
   margin-right: auto;
 }
@@ -149,20 +161,42 @@ body {
 
 /* CONTACT MENU */
 
-.contacts {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: none;
+  }
 }
 
-.contact-link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  color: var(--primary-text-color);
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    gap: 12px;
+    font-size: 12px;
+  }
 
-  transition: color var(--anim-fast);
+  .contact-link {
+    display: block;
+    color: var(--primary-text-color);
+
+    transition: color var(--anim-fast);
+  }
 }
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contact-link {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: var(--primary-text-color);
+  }
+}
+
 .contact-link:hover,
 .contact-link:focus {
   color: var(--pressed-color);
@@ -1077,4 +1111,77 @@ footer {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--pressed-bg-clr);
+}
+
+/* MOBILE MENU */
+
+.menu-icon {
+  fill: var(--title-text-color);
+}
+
+.menu-toggle {
+  min-height: 22px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  margin-left: auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: var(--white-bg-clr);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #5c0505;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #5441e9;
+  text-decoration: none;
 }
