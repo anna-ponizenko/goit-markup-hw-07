@@ -146,29 +146,47 @@
           <ul class="gallery-list list">
             <li class="gallery-item">
               <img
+                srcset="
+                  ./images/section-2/img-1_360.jpg 360w,
+                  ./images/section-2/img-1_720.jpg 720w
+                "
+                sizes="(min-width: 1200px) 360px, (min-width: 768px), (min-width: 480px)"
                 class="gallery-img"
-                src="./images/section-2/img-1.jpg"
+                src="./images/section-2/img-1_360.jpg"
                 alt="analytics"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="gallery-item">
               <img
+                srcset="
+                  ./images/section-2/img-2_360.jpg 360w,
+                  ./images/section-2/img-2_720.jpg 720w
+                "
+                sizes="(min-width: 1200px) 360px, (min-width: 768px), (min-width: 480px)"
                 class="gallery-img"
-                src="./images/section-2/img-2.jpg"
+                src="./images/section-2/img-2_360.jpg"
                 alt="messenger"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="gallery-item">
               <img
+                srcset="
+                  ./images/section-2/img-3_360.jpg 360w,
+                  ./images/section-2/img-3_720.jpg 720w
+                "
+                sizes="(min-width: 1200px) 360px, (min-width: 768px), (min-width: 480px)"
                 class="gallery-img"
-                src="./images/section-2/img-3.jpg"
+                src="./images/section-2/img-3_360.jpg"
                 alt="phone and laptop synchronization"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
           </ul>
@@ -180,13 +198,40 @@
           <h2 class="section-title">Our Team</h2>
           <ul class="team-card-list list">
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./images/section-3/img-1.jpg"
-                alt="photo of Mark Guerrero"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    images/section-3/img-1_deck@1x.jpg 1x,
+                    images/section-3/img-1_deck@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/section-3/img-1_tab@1x.jpg 1x,
+                    images/section-3/img-1_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/section-3/img-1_mob@1x.jpg 1x,
+                    images/section-3/img-1_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-img"
+                  src="./images/section-3/img-1_mob@1x.jpg"
+                  alt="photo of Mark Guerrero"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-name">Mark Guerrero</h3>
                 <p class="team-position">Product Designer</p>
@@ -247,13 +292,40 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./images/section-3/img-2.jpg"
-                alt="photo of Tom Ford"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    images/section-3/img-2_deck@1x.jpg 1x,
+                    images/section-3/img-2_deck@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/section-3/img-2_tab@1x.jpg 1x,
+                    images/section-3/img-2_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/section-3/img-2_mob@1x.jpg 1x,
+                    images/section-3/img-2_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-img"
+                  src="./images/section-3/img-2_mob@1x.jpg"
+                  alt="photo of Tom Ford"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-name">Tom Ford</h3>
                 <p class="team-position">Frontend Developer</p>
@@ -314,13 +386,40 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./images/section-3/img-3.jpg"
-                alt="photo of Camila Garcia"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    images/section-3/img-3_deck@1x.jpg 1x,
+                    images/section-3/img-3_deck@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/section-3/img-3_tab@1x.jpg 1x,
+                    images/section-3/img-3_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/section-3/img-3_mob@1x.jpg 1x,
+                    images/section-3/img-3_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-img"
+                  src="./images/section-3/img-3_mob@1x.jpg"
+                  alt="photo of Camila Garcia"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-name">Camila Garcia</h3>
                 <p class="team-position">Marketing</p>
@@ -381,13 +480,40 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./images/section-3/img-4.jpg"
-                alt="photo of Daniel Wilson"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    images/section-3/img-4_deck@1x.jpg 1x,
+                    images/section-3/img-4_deck@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/section-3/img-4_tab@1x.jpg 1x,
+                    images/section-3/img-4_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/section-3/img-4_mob@1x.jpg 1x,
+                    images/section-3/img-4_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-img"
+                  src="./images/section-3/img-4_mob@1x.jpg"
+                  alt="photo of Daniel Wilson"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-name">Daniel Wilson</h3>
                 <p class="team-position">UI Designer</p>
@@ -699,7 +825,11 @@
         <li
           ><a href="./portfolio.html" class="mobile-page link">Portfolio</a></li
         >
-        <li><a href="" class="mobile-page contact-page link">Contacts</a></li>
+        <li
+          ><a href="" class="mobile-page current contact-page link"
+            >Contacts</a
+          ></li
+        >
       </ul>
       <ul class="contact-menu list">
         <li class="contact-menu-item">

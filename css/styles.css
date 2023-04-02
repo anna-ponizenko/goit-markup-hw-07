@@ -43,6 +43,7 @@ body {
 
 /* CURRENT */
 
+.mobile-menu .mobile-page.current,
 .menu .menu-link.current {
   color: var(--pressed-color);
 }
@@ -243,15 +244,72 @@ body {
   z-index: var(--hero-idx);
 
   background-color: var(--dark-bg-clr);
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero/people-office\ 1.jpg);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   max-width: 1440px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/people-office_mob@1x.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/people-office_mob@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/people-office_tab@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/people-office_tab@2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/people-office_deck@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/people-office_deck@2x.jpg);
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -596,7 +654,9 @@ footer {
   }
 
   .container-footer {
-    max-width: 552px;
+    max-width: 584px;
+    padding-right: 16px;
+    padding-left: 16px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1260,8 +1320,4 @@ footer {
   font-size: 20px;
   line-height: 1.2;
   color: var(--primary-text-color);
-}
-
-.mobile-menu.mobile-page.current {
-  color: var(--pressed-bg-clr);
 }
