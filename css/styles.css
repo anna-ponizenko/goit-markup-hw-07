@@ -96,17 +96,20 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  margin-right: 76px;
-
   color: var(--primary-brand-color);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .logo-header {
     margin-right: 120px;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .logo-header {
+    margin-right: 76px;
+  }
+}
 .logo-dark {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -172,7 +175,6 @@ body {
   .contacts {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
     gap: 12px;
     font-size: 12px;
   }
@@ -476,6 +478,12 @@ ul {
   display: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 1200px) {
   .gallery {
     display: block;
@@ -487,12 +495,6 @@ ul {
     padding: 0;
     margin: 0;
     gap: var(--indent);
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -985,9 +987,9 @@ footer {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-
-  width: 392px;
-  height: 586px;
+  width: 90%;
+  min-width: 300px;
+  height: 600px;
   border-radius: 4px;
   padding: 72px 24px 24px;
 
@@ -998,10 +1000,16 @@ footer {
   transition: transform var(--anim-fast), opacity var(--anim-fast);
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 392px;
+    height: 586px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal {
     width: 408px;
-    height: 586px;
   }
 }
 
@@ -1118,9 +1126,13 @@ footer {
 }
 
 .argeement-form {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
-
+@media screen and (min-width: 480px) {
+  .argeement-form {
+    margin-bottom: 16px;
+  }
+}
 .contact-form-checkbox {
   appearance: none;
   width: 16px;
@@ -1224,7 +1236,10 @@ footer {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: var(--white-bg-clr);
   z-index: 999;
 
@@ -1258,7 +1273,6 @@ footer {
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
   margin: 0;
   list-style: none;
   gap: 40px;
@@ -1302,13 +1316,12 @@ footer {
 .social-list-menu {
   display: flex;
   justify-content: flex-start;
-  gap: 56px;
+  gap: 40px;
 }
 
-.contact-page,
 .tel-number {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.1;
 
   text-transform: capitalize;
